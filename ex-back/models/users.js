@@ -63,8 +63,10 @@ const schema = new Schema({
   versionKey: false
 })
 
+// .virtual => 建立虛擬欄位，不會儲存在user儲存庫資料內，但可以使用
 schema.virtual('cartQuantity')
   .get(function () {
+    // .reduce() 用法： https://w3c.hexschool.com/blog/a2cb755f
     return this.cart.reduce((total, current) => {
       return total + current.quantity
     }, 0)

@@ -61,7 +61,7 @@ export const useApi = () => {
   return { api, apiAuth }
 }
 
-// 拆開式寫法(內容與上面不同，僅範例)
+// 拆開式寫法，把所有斷點分開封裝(內容與上面不同，僅範例)
 // export const useApi = () => {
 //   const api = axios.create({
 //     baseURL: import.meta.env.VITE_API
